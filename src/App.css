@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
-
-.App {
+#App {
+    font-family: 'Jura', sans-serif;
+}
+#header {
+    width: 100vw;
+    height: 10vh;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 2rem;
+}
 
+#header > h1 {
+    font-size: 60px;
+}
+
+#deck-and-card-container {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-around;
 }
 
 #card-container {
@@ -18,7 +32,6 @@
 }
 
 #card-info {
-    font-family: 'Jura', sans-serif;
     margin-left: 2rem;
     width: 30vw;
 }
