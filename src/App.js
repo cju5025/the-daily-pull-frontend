@@ -8,7 +8,8 @@ let x = false;
 class App extends Component {
   state = {
     cards: [],
-    deckClicked: false
+    randomCard: {},
+    deckClicked: false,
   }
 
   componentDidMount = () => {
@@ -22,20 +23,17 @@ class App extends Component {
   }
 
   pullCard = () => {
-    this.setState({ deckClicked: true})
-  }
-
-  showCards = () => {
-    return this.state.cards.map(card => {
-      // return <div><p>{card.name}</p><img src={card.image}/></div>
-    })
+    this.setState({ 
+      deckClicked: true,
+      randomCard: this.state.cards[Math.floor(Math.random() * this.state.cards.length)]})
+    
   }
 
   render () {
     return (
       <div className="App">
         <Deck pullCard={this.pullCard}/>
-        {this.state.deckClicked ? <Card cards={this.state.cards}/> : null}
+        {this.state.deckClicked ? <Card cards={this.state.cards} randomCard={this.state.randomCard}/> : null}
       </div>
     )
   }
