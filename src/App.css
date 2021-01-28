@@ -1,0 +1,16 @@
+.App {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#card-container {
+
+}
+
+#card-container > img {
+    padding-top: 1rem;
+    width: 250px;
+    height: 450px;
+    /* border-radius: 20px; */
+}

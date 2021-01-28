@@ -1,10 +1,14 @@
 import { Component } from 'react';
 import './App.css';
 import Deck from './components/Deck';
+import Card from './components/Card';
+
+let x = false;
 
 class App extends Component {
   state = {
-    cards: []
+    cards: [],
+    deckClicked: false
   }
 
   componentDidMount = () => {
@@ -17,6 +21,10 @@ class App extends Component {
       }))
   }
 
+  pullCard = () => {
+    this.setState({ deckClicked: true})
+  }
+
   showCards = () => {
     return this.state.cards.map(card => {
       // return <div><p>{card.name}</p><img src={card.image}/></div>
@@ -26,7 +34,8 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <Deck />
+        <Deck pullCard={this.pullCard}/>
+        {this.state.deckClicked ? <Card cards={this.state.cards}/> : null}
       </div>
     )
   }
