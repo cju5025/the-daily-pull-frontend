@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+
 .App {
     display: flex;
     justify-content: space-around;
@@ -6,12 +8,26 @@
 
 #card-container {
     display: flex;
-    flex-direction: column;
 }
 
 #card-container > img {
     padding-top: 1rem;
     width: 250px;
     height: 450px;
-    /* border-radius: 20px; */
+    box-shadow: 10px 10px 5px grey;
+}
+
+#card-info {
+    font-family: 'Jura', sans-serif;
+    margin-left: 2rem;
+    width: 30vw;
+}
+
+#card-info > h1 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+}
+
+#card-info > p {
+    font-size: 20px;
 }

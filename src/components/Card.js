@@ -17,11 +17,15 @@ export default class Card extends Component {
         return (
             <div id="card-container">
                 <img src={this.props.randomCard.image} alt={this.props.randomCard.name} />
-                <h1>{this.props.randomCard.name}</h1>
-                <p>{this.state.ekelenCard.desc}</p>
-                <br></br>
-                <p>{this.state.ekelenCard.meaning_up}</p>
-            </div>
+                    <div id="card-info">
+                        <h1>{this.props.randomCard.name}</h1>
+                        {/* <h2>{this.state.ekelenCard.suit}</h2>
+                        <h3>{this.state.ekelenCard.type}</h3> */}
+                        <p>{this.state.ekelenCard.meaning_up}</p>
+                        <br/>
+                        <p>{this.state.ekelenCard.desc}</p>
+                    </div>
+                    </div>
         )
     }
 }
