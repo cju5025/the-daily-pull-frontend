@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
+import Deck from './components/Deck';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    cards: []
+  }
+
+  componentDidMount = () => {
+    fetch('http://localhost:3000/cards')
+      .then(response => response.json())
+      .then(cards => cards.forEach(card => {
+        this.setState({
+          cards: [...this.state.cards, card]
+        })
+      }))
+  }
+
+  showCards = () => {
+    return this.state.cards.map(card => {
+      // return <div><p>{card.name}</p><img src={card.image}/></div>
+    })
+  }
+
+  render () {
+    return (
+      <div className="App">
+        <Deck />
+      </div>
+    )
+  }
 }
 
 export default App;
