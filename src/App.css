@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Imbue:wght@300&display=swap');
+
 #App {
     font-family: 'Jura', sans-serif;
 }
@@ -6,24 +9,37 @@
     width: 100vw;
     height: 10vh;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     margin-bottom: 2rem;
     box-shadow: 5px .5px 20px 5px #3b67a1;
 }
 
+#header > img {
+    margin-left: 2vw;
+}
+
 #header > h1 {
+    display: flex;
+    align-items: center;
+    font-family: 'Imbue', serif;
+    margin-left: 10vw;
     font-size: 60px;
     color: rgb(54, 54, 54);
 }
 
 #header > ul {
+    margin-left: 20vw;
     display: flex;
     align-items: center;
 
 }
 
+#header > ul > li {
+    text-shadow: .25px .25px #7e713c;
+}
+
 #header > ul > li+li {
-    margin-left: 1rem;
+    margin-left: 2vw;
 }
 
 #instructions-container {
@@ -34,6 +50,7 @@
 #instructions-container > p {
     margin-left: 20vw;
     font-size: 25px;
+    text-shadow: .25px .25px #7e713c;
 }
 
 #pothos {
@@ -63,9 +80,10 @@
 }
 
 #card-info > h1 {
-    font-size: 40px;
+    font-family: 'Imbue', serif;
+    font-size: 50px;
     margin-bottom: 1rem;
-    text-shadow: 1.5px 1.5px #7e713c;
+    text-shadow: .5px .5px #7e713c;
 }
 
 #card-info > p {
