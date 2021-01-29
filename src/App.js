@@ -6,8 +6,6 @@ import Card from './components/Card';
 import Header from './components/Header';
 import Instructions from './components/Instructions';
 
-let x = false;
-
 class App extends Component {
   state = {
     cards: [],
@@ -36,6 +34,7 @@ class App extends Component {
     return (
       <div id="App">
         <Header />
+        {/* <img id="pothos" src="https://i.ibb.co/f0S8XRj/pothos-2.jpg" alt="pothos"/> */}
         <div id="deck-and-card-container">
         {
           this.state.deckClicked ? 
