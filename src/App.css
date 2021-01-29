@@ -14,7 +14,7 @@
     box-shadow: 5px .5px 20px 5px #3b67a1;
 }
 
-#header > img {
+#logo {
     margin-left: 2vw;
 }
 
@@ -41,6 +41,8 @@
 #header > ul > li+li {
     margin-left: 2vw;
 }
+
+
 
 #instructions-container {
     height: 10vh;
