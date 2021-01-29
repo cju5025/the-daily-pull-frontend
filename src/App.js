@@ -35,14 +35,13 @@ class App extends Component {
       <div id="App">
         <Header />
         {/* <img id="pothos" src="https://i.ibb.co/f0S8XRj/pothos-2.jpg" alt="pothos"/> */}
-        <div id="deck-and-card-container">
         {
           this.state.deckClicked ? 
           null
           :
           <Instructions />
-
         }
+        <div id="deck-and-card-container">
           <Deck pullCard={this.pullCard}/>
           {
             this.state.deckClicked ?

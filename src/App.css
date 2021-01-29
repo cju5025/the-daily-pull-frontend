@@ -8,11 +8,32 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 2rem;
-    box-shadow: 0px 5px 10px 5px grey;
+    box-shadow: 5px .5px 20px 5px #3b67a1;
 }
 
 #header > h1 {
     font-size: 60px;
+    color: rgb(54, 54, 54);
+}
+
+#header > ul {
+    display: flex;
+    align-items: center;
+
+}
+
+#header > ul > li+li {
+    margin-left: 1rem;
+}
+
+#instructions-container {
+    height: 10vh;
+    width: 100vw;
+}
+
+#instructions-container > p {
+    margin-left: 20vw;
+    font-size: 25px;
 }
 
 #pothos {
@@ -33,7 +54,7 @@
     padding-top: 1rem;
     width: 250px;
     height: 450px;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 10px 10px 7.5px grey;
 }
 
 #card-info {
@@ -44,8 +65,10 @@
 #card-info > h1 {
     font-size: 40px;
     margin-bottom: 1rem;
+    text-shadow: 1.5px 1.5px #7e713c;
 }
 
 #card-info > p {
     font-size: 20px;
+    text-shadow: .25px .25px #7e713c;
 }
