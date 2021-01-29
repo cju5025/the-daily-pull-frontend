@@ -34,7 +34,6 @@ class App extends Component {
     return (
       <div id="App">
         <Header />
-        {/* <img id="pothos" src="https://i.ibb.co/f0S8XRj/pothos-2.jpg" alt="pothos"/> */}
         {
           this.state.deckClicked ? 
           null
