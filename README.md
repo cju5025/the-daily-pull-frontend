@@ -17,5 +17,6 @@
         - rails db:migrate
         - rails s
     - For Frontend
+        - npm i
         - npm start
         
